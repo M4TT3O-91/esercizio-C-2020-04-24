@@ -64,8 +64,6 @@ int main(int argc, char *argv[]) {
 
 	switch (fork()) {
 		case 0: {
-			sleep(1);
-
 			if ((file_offset = lseek(fd, 0, SEEK_END)) == -1) {
 				perror("lseek()");
 				exit(EXIT_FAILURE);
